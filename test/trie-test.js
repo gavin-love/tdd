@@ -41,7 +41,13 @@ describe('Trie', () => {
       expect(trie.suggest).to.exist;
     });
 
-    it.only('should suggest a word based on entry', () => {
+    it('should start as an empty array', () => {
+      trie.suggest('h');
+      
+      expect(trie.suggestions).to.deep.equal([]);
+    });
+
+    it('should suggest a word based on entry', () => {
       trie.insert('hi');
       trie.insert('hello');
       trie.insert('helper');
