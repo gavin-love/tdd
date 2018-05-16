@@ -35,4 +35,20 @@ describe('Trie', () => {
       expect(trie.counter).to.equal(3);
     });
   });
+
+  describe('suggest', () => {
+    it('it should exist', () =>  {
+      expect(trie.suggest).to.exist;
+    });
+
+    it.only('should suggest a word based on entry', () => {
+      trie.insert('hi');
+      trie.insert('hello');
+      trie.insert('helper');
+      trie.insert('happy');
+      trie.suggest('h');
+
+      expect(trie.suggestions).to.deep.equal(['hi', 'hello', 'helper', 'happy']);
+    });
+  });
 });
