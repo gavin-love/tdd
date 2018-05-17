@@ -11,7 +11,7 @@ describe('Trie', () => {
   
   it('should count words in the dicitonary', () => {
     trie.countComplete();
-    expect(trie.counter).to.equal(234371);
+    expect(trie.completedWordCount).to.equal(234371);
   });
     
   it('should suggest a word based on a prefix', () => {

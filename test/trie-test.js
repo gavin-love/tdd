@@ -32,7 +32,7 @@ describe('Trie', () => {
       trie.insert('funky');
       trie.countComplete();
 
-      expect(trie.counter).to.equal(3);
+      expect(trie.completedWordCount).to.equal(3);
     });
   });
 

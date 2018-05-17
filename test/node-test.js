@@ -16,10 +16,6 @@ describe('Node', () => {
     expect(node.children).to.deep.equal({});
   });
 
-  it('should default endNode to false', () => {
-    expect(node.endNode).to.equal(null);
-  });
-
   it('should take a letter and assign it to the letter property', () => {
     expect(node.value).to.equal('k');
   });
