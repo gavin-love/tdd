@@ -52,6 +52,7 @@ describe('Trie', () => {
       trie.insert('hello');
       trie.insert('helper');
       trie.insert('happy');
+      trie.insert('dog');
       trie.suggest('h');
 
       expect(trie.suggestions).to.deep.equal(['hi', 'hello', 'helper', 'happy']);
