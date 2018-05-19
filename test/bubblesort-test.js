@@ -36,7 +36,7 @@ describe('bubbleSort', function () {
   it('should sort a large array of numbers', () => {
     let array;
 
-    array = arrayGenerator(35000);
+    array = arrayGenerator(30000);
 
     let expected = array.sort();
     let actual = bubbleSort(array);
